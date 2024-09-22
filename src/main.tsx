@@ -6,7 +6,9 @@ import Root from "./routes/root";
 import ErrorPage from "./routes/error-page";
 import { Routes } from "./routes/routes";
 
+const publicPath = Routes.filter((route) => !route.protected);
 const router = createBrowserRouter([
+  ...publicPath,
   {
     path: "/",
     element: <Root />,

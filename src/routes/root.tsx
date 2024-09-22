@@ -12,7 +12,7 @@ export default function Root() {
       <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
       <div className="flex flex-col w-full">
         <Header setIsOpen={setIsOpen} />
-        <div id="detail">
+        <div id="detail" className="flex flex-1">
           <Outlet />
         </div>
       </div>
